@@ -1,6 +1,6 @@
 [
-  { "id": "1", "nombre": "Bajo Epiphone EB-0", "img": "img/Epi.jpg", "precio": 250 },
-  { "id": "2", "nombre": "Bajo Fender Precision", "img": "img/Fender.jpg", "precio": 800 },
-  { "id": "3", "nombre": "Bajo Sx SJB62", "img": "img/Sx.jpg", "precio": 180 },
-  { "id": "4", "nombre": "Bajo Yamaha TRBX504", "img": "img/Yam.jpg", "precio": 600 }
+  { "id": "1", "nombre": "Bajo Epiphone EB-0", "img": "img/epi.jpg", "precio": 250 },
+  { "id": "2", "nombre": "Bajo Fender Precision", "img": "img/ender.jpg", "precio": 800 },
+  { "id": "3", "nombre": "Bajo Sx SJB62", "img": "img/sx.jpg", "precio": 180 },
+  { "id": "4", "nombre": "Bajo Yamaha TRBX504", "img": "img/yam.jpg", "precio": 600 }
 ]
