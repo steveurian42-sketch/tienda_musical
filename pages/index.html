@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es"> <!-- Cambiado de 'en' a 'es' para indicar el idioma principal -->
+<head> 
+    <meta charset="UTF-8">
+    <!-- Ajuste en el viewport: 'device-width' en lugar de 'device-with' -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Etiquetas meta para SEO y visualización social (Open Graph) -->
+    <meta name="description" content="Tienda online de bajos eléctricos y accesorios musicales. Todo para el bajista moderno.">
+    <meta property="og:title" content="En Clave de Fa | Tienda Musical">
+    <meta property="og:description" content="Encuentra tu próximo bajo eléctrico y accesorios esenciales.">
+    <!-- Añadir meta property="og:image" content="URL de una imagen representativa" si tienes una -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css"/>
+    <title>En Clave de Fa | Tienda Musical</title> <!-- Título más descriptivo para SEO -->
+</head>
+<body>
+    <header class="header">
+       <div class="div-log">
+            <!-- Añadido aria-label para accesibilidad en el logo -->
+            <a class="logo" href="index.html" aria-label="Volver a la página de inicio">EN CLAVE DE FA</a>
+        </div>
+       <!-- Añadido aria-label para accesibilidad en la navegación principal -->
+       <nav class="header__nav" aria-label="Navegación principal del sitio"> 
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="carrito.html" class="carrito-icono">
+              🛒 <span id="contador-carrito">0</span>
+            </a></li>
+        </ul>
+       </nav>
+    </header>
+
+    <main>
+        <h1 class="titulo-home">Bienvenidos a la tienda musical.</h1>
+        <p class="parrafo">
+            Aquí podrás encontrar diferentes modelos de bajo electrico y accesorios musicales. 
+            Todo para el bajista.
+        </p>
+
+        <section>
+            <h2 class= "titulo-productos">Algunos de nuestros modelos</h2>
+            <div id="contenedor-tarjetas" class="contenedor-tarjetas-clase">
+                <!-- Los productos vienen desde index.js, asegurarse de que esas tarjetas incluyan atributos alt="" para las imágenes -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p> Sitio realizado por Steve para Talento Tech</p>
+        <!-- Añadido aria-label para accesibilidad en la navegación social -->
+        <nav aria-label="Enlaces a redes sociales">
+        <ul>
+            <!-- Idealmente, estos <li> deberían contener enlaces <a> reales -->
+            <li>Instagram</li>
+            <li>Whatsapp</li>
+        </ul>    
+      </nav>
+    </footer>
+    <script src="../js/index.js" type="module"></script>
+</body>
+</html>

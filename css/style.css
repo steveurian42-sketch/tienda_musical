@@ -1,0 +1,205 @@
+css
+/* --- 1. RESET Y VARIABLES GLOBALES --- */
+/* Un reset ligero para asegurar consistencia entre navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Fundamental para el cálculo de anchos y paddings */
+}
+
+:root {
+    /* Definición de colores y fuentes como variables CSS personalizadas */
+    --color-primario: #333;
+    --color-secundario: #007BFF; /* Un azul de ejemplo para enlaces/botones */
+    --color-fondo: #f4f4f4;
+    --color-texto-claro: #fff;
+    --fuente-principal: 'Poppins', sans-serif;
+}
+
+body {
+    font-family: var(--fuente-principal);
+    background-color: var(--color-fondo);
+    color: var(--color-primario);
+    line-height: 1.6; 
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+/* --- 2. TIPOGRAFÍA Y ESTILOS BÁSICOS --- */
+h1, h2, h3 {
+    margin-bottom: 1rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+a {
+    text-decoration: none; /* Elimina el subrayado por defecto */
+    transition: color 0.3s ease; /* Añade una transición suave al pasar el mouse */
+}
+
+a:hover, a:focus-visible {
+    color: var(--color-secundario);
+}
+
+ul {
+    list-style: none; /* Elimina las viñetas de las listas */
+}
+
+/* --- 3. LAYOUT GENERAL (Header, Main, Footer) --- */
+header, footer {
+    background-color: var(--color-primario);
+    color: var(--color-texto-claro);
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+header a, footer a {
+    color: var(--color-fondo);
+}
+
+main {
+    flex-grow: 1; /* Esto empuja el footer hacia abajo */
+    padding: 2rem 5%;   
+    max-width: 1200px; /* Limita el ancho del contenido principal en pantallas grandes */
+    margin: 0 auto; /* Centra el contenido principal */
+}
+
+/* --- 4. NAVEGACIÓN Y COMPONENTES --- */
+.logo {
+    color: var(--color-texto-claro);
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.header__nav ul, footer nav ul {
+    display: flex;
+    gap: 20px; /* Espaciado moderno entre elementos de lista */
+}
+
+.header__nav a {
+    color: var(--color-texto-claro);
+}
+
+.header__nav a:hover,
+.header__nav a:focus-visible {
+    color: var(--color-secundario);
+}
+
+/* --- 5. SECCIÓN PRINCIPAL Y TARJETAS (Asumiendo estilos para productos) --- */
+.titulo-home, .parrafo, .titulo-productos {
+    margin-bottom: 1.5rem;
+}
+
+.titulo-productos {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.contenedor-tarjetas-clase {
+    display: grid;
+    /* Un layout responsivo usando CSS Grid */
+    /* Mínimo de 250px por columna, se ajusta automáticamente */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem; /* Espacio entre las tarjetas */
+    margin-top: 1.5rem;
+}
+
+/* Estilos para las tarjetas de productos que vienen de JS */
+.tarjeta-producto {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.2s;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.tarjeta-producto:hover {
+    transform: translateY(-5px);
+}
+
+.tarjeta-producto img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.tarjeta-producto h3 {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.tarjeta-producto p {
+    font-weight: bold;
+    color: var(--color-secundario);
+}
+
+/* --- 6. BOTONES --- */
+.btn {
+    background-color: var(--color-secundario);
+    color: var(--color-texto-claro);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.btn-eliminar-carrito {
+    background-color: var(--color-primario);
+    border: 2px solid var(--color-secundario);
+}
+
+.btn-eliminar-carrito:hover {
+    background-color: #1a1a1a;
+}
+
+.btn-vaciar-carrito {
+    background-color: #f7bb2b;
+    color: var(--color-primario);
+}
+
+.btn-vaciar-carrito:hover {
+    background-color: #e0aa24;
+}
+
+/* --- 7. CARRITO Y MENSAJES --- */
+#contenedor-carrito {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.mensaje-carrito-vacio {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 2rem;
+    color: var(--color-primario);
+}
+
+.acciones-carrito {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
